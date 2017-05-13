@@ -23,3 +23,4 @@ post('login', 'SessionsController@store')->name('login');
 delete('logout', 'SessionsController@destroy')->name('logout');
 
 get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
